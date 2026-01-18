@@ -6,6 +6,7 @@ QDialogButtonBox > QPushButton[text="&No"] {
     background-color: green;
 }
 
+
 QDialogButtonBox > QPushButton {
     border: none;
     border-radius: 5px;

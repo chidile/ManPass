@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\SIRCHIMEX\Documents\SOFT PROJECTS\PYTHON PROJECTS\ManPass\ui\login.ui'
+# Form implementation generated from reading ui file '.\login.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -166,7 +166,7 @@ class Ui_Form(object):
         self.lineEdit = QtWidgets.QLineEdit(self.page)
         self.lineEdit.setMinimumSize(QtCore.QSize(300, 0))
         font = QtGui.QFont()
-        font.setPointSize(8)
+        font.setPointSize(10)
         self.lineEdit.setFont(font)
         self.lineEdit.setClearButtonEnabled(True)
         self.lineEdit.setObjectName("lineEdit")
@@ -184,7 +184,7 @@ class Ui_Form(object):
         self.lineEdit_2 = QtWidgets.QLineEdit(self.page)
         self.lineEdit_2.setMinimumSize(QtCore.QSize(300, 0))
         font = QtGui.QFont()
-        font.setPointSize(8)
+        font.setPointSize(10)
         self.lineEdit_2.setFont(font)
         self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
         self.lineEdit_2.setClearButtonEnabled(True)
@@ -262,7 +262,7 @@ class Ui_Form(object):
         self.lineEdit_3 = QtWidgets.QLineEdit(self.page_2)
         self.lineEdit_3.setMinimumSize(QtCore.QSize(300, 17))
         font = QtGui.QFont()
-        font.setPointSize(8)
+        font.setPointSize(10)
         self.lineEdit_3.setFont(font)
         self.lineEdit_3.setClearButtonEnabled(True)
         self.lineEdit_3.setObjectName("lineEdit_3")
@@ -280,7 +280,7 @@ class Ui_Form(object):
         self.lineEdit_4 = QtWidgets.QLineEdit(self.page_2)
         self.lineEdit_4.setMinimumSize(QtCore.QSize(300, 15))
         font = QtGui.QFont()
-        font.setPointSize(8)
+        font.setPointSize(10)
         self.lineEdit_4.setFont(font)
         self.lineEdit_4.setEchoMode(QtWidgets.QLineEdit.Password)
         self.lineEdit_4.setClearButtonEnabled(True)

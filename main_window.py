@@ -1,12 +1,20 @@
-from PyQt5.QtWidgets import QWidget, QMessageBox, QMainWindow
+from PyQt5.QtWidgets import QWidget, QMessageBox, QMainWindow, QApplication, QTableWidgetItem,\
+    QPushButton, QHeaderView, QAbstractItemView, QVBoxLayout, QHBoxLayout
 from PyQt5.QtCore import pyqtSlot, Qt, QPoint
 from PyQt5.QtGui import QIcon, QPixmap, QMouseEvent
 
 from ui.main_window_ui import Ui_MainWindow
+from sql_class import ConnectMySQL
+
+import random
+
 
 class MainWindow(QMainWindow):
-    def __init__(self,):
+    def __init__(self, user_id=None):
         super(MainWindow, self).__init__()
+
+        self.USER_ID = user_id
+        self.mysql = ConnectMySQL()
 
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
@@ -17,6 +25,21 @@ class MainWindow(QMainWindow):
         self.conf_btn = self.ui.pushButton_3
 
         self.pages = self.ui.stackedWidget
+
+        ## SHOW PASSWORD WINDOW
+        self.website_show = self.ui.lineEdit_5
+        self.userame_show = self.ui.lineEdit_4
+
+        self.pw_table = self.ui.tableWidget
+
+        ##Password generate window
+        self.website_create = self.ui.lineEdit
+        self.username_create = self.ui.lineEdit_2
+        self.password_length = self.ui.spinBox
+        self.lowercase_le = self.ui.checkBox
+        self.uppercase_le = self.ui.checkBox
+        self.lowercase_le = self.ui.checkBox
+        
 
         ## Show the ppassword list page
         self.pages.setCurrentIndex(0)

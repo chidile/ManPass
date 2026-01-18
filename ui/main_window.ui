@@ -327,6 +327,19 @@ QCheckBox:indicator:checked{
         </widget>
        </item>
        <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -366,7 +379,7 @@ QCheckBox:indicator:checked{
     <item row="0" column="1">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QGridLayout" name="gridLayout_4">
@@ -557,7 +570,7 @@ QCheckBox:indicator:checked{
         <property name="verticalSpacing">
          <number>20</number>
         </property>
-        <item row="0" column="0" colspan="3">
+        <item row="0" column="0" colspan="2">
          <layout class="QGridLayout" name="gridLayout_5">
           <property name="horizontalSpacing">
            <number>10</number>
@@ -573,7 +586,13 @@ QCheckBox:indicator:checked{
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QLineEdit" name="lineEdit"/>
+           <widget class="QLineEdit" name="lineEdit">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+           </widget>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label">
@@ -594,6 +613,11 @@ QCheckBox:indicator:checked{
           </item>
           <item row="2" column="1">
            <widget class="QSpinBox" name="spinBox">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
             <property name="value">
              <number>8</number>
             </property>
@@ -601,13 +625,13 @@ QCheckBox:indicator:checked{
           </item>
          </layout>
         </item>
-        <item row="1" column="0" colspan="3">
+        <item row="1" column="0" colspan="2">
          <layout class="QHBoxLayout" name="horizontalLayout">
           <property name="spacing">
            <number>50</number>
           </property>
           <item>
-           <spacer name="horizontalSpacer">
+           <spacer name="horizontalSpacer_4">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -618,6 +642,13 @@ QCheckBox:indicator:checked{
              </size>
             </property>
            </spacer>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_4">
+            <property name="text">
+             <string>Lowercase</string>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="checkBox">
@@ -641,7 +672,7 @@ QCheckBox:indicator:checked{
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_2">
+           <spacer name="horizontalSpacer_5">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -655,21 +686,65 @@ QCheckBox:indicator:checked{
           </item>
          </layout>
         </item>
-        <item row="5" column="0" colspan="3">
-         <spacer name="verticalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
+        <item row="2" column="0">
+         <widget class="QPushButton" name="generateRestBtn">
+          <property name="minimumSize">
            <size>
-            <width>657</width>
-            <height>304</height>
+            <width>0</width>
+            <height>32</height>
            </size>
           </property>
-         </spacer>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Reset</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../static/resource.qrc">
+            <normaloff>:/icon/icon/redo-5-128.gif</normaloff>:/icon/icon/redo-5-128.gif</iconset>
+          </property>
+         </widget>
         </item>
-        <item row="3" column="0" colspan="3">
+        <item row="2" column="1">
+         <widget class="QPushButton" name="generateCreateBtn">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Generate Password</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../static/resource.qrc">
+            <normaloff>:/icon/icon/pressure-128.gif</normaloff>:/icon/icon/pressure-128.gif</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
          <widget class="QLineEdit" name="generatePWLineEdit">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <pointsize>-1</pointsize>
@@ -693,76 +768,7 @@ QCheckBox:indicator:checked{
           </property>
          </widget>
         </item>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="generateRestBtn">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Reset</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../static/resource.qrc">
-            <normaloff>:/icon/icon/redo-5-128.gif</normaloff>:/icon/icon/redo-5-128.gif</iconset>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1" colspan="2">
-         <widget class="QPushButton" name="generateCreateBtn">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Generate Password</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../static/resource.qrc">
-            <normaloff>:/icon/icon/pressure-128.gif</normaloff>:/icon/icon/pressure-128.gif</iconset>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="2">
-         <widget class="QPushButton" name="generateSaveBtn">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Save</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../static/resource.qrc">
-            <normaloff>:/icon/icon/save-128.gif</normaloff>:/icon/icon/save-128.gif</iconset>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0" colspan="2">
+        <item row="4" column="0">
          <widget class="QPushButton" name="generateCopyBtn">
           <property name="minimumSize">
            <size>
@@ -784,6 +790,47 @@ QCheckBox:indicator:checked{
             <normaloff>:/icon/icon/copy-128.gif</normaloff>:/icon/icon/copy-128.gif</iconset>
           </property>
          </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="generateSaveBtn">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Save</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../static/resource.qrc">
+            <normaloff>:/icon/icon/save-128.gif</normaloff>:/icon/icon/save-128.gif</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="2">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>657</width>
+            <height>304</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </widget>
